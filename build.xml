@@ -1,0 +1,48 @@
+<project name="project" default="default" basedir=".">
+    <description>Builds, tests, and runs the project.</description>
+    
+    <!-- Import the default NetBeans build script -->
+    <import file="nbproject/build-impl.xml"/>
+
+    <!-- Initialize and include external JARs -->
+    <target name="-post-init">
+        <!-- Define the directory containing external libraries -->
+        <property name="libs.dir" value="lib"/>
+        
+        <!-- Create a classpath from all JAR files in the libs directory -->
+        <path id="extra.classpath">
+            <fileset dir="${libs.dir}">
+                <include name="**/*.jar"/>
+            </fileset>
+        </path>
+        
+        <!-- Add the external classpath to the relevant properties -->
+        <property name="run.classpath" value="${run.classpath}:${toString:extra.classpath}"/>
+        <property name="debug.classpath" value="${debug.classpath}:${toString:extra.classpath}"/>
+        <property name="javac.classpath" value="${javac.classpath}:${toString:extra.classpath}"/>
+    </target>
+
+    <!-- Print the classpath for debugging (optional) -->
+    <target name="print-classpath">
+        <echo>Run Classpath: ${run.classpath}</echo>
+        <echo>Debug Classpath: ${debug.classpath}</echo>
+        <echo>Javac Classpath: ${javac.classpath}</echo>
+    </target>
+
+    <!-- Clean and rebuild the project -->
+    <target name="clean-rebuild" depends="clean, jar">
+        <echo>Project rebuilt successfully!</echo>
+    </target>
+
+    <!-- Verify classpath inclusion -->
+    <target name="verify-classpath">
+        <condition property="classpath.complete" value="true" else="false">
+            <and>
+                <available file="lib/slf4j-api-1.7.36.jar"/>
+                <available file="lib/slf4j-simple-1.7.36.jar"/>
+                <available file="lib/itext7-core-7.2.5.jar"/>
+            </and>
+        </condition>
+        <echo message="Classpath verification: ${classpath.complete}"/>
+    </target>
+</project>

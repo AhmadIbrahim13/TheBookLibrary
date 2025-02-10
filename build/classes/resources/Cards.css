@@ -1,0 +1,175 @@
+/* Root layout styling */
+.root {
+    -fx-background-color: #e8d3c3; /* Light brown background */
+    -fx-font-family: "Arial, sans-serif";
+}
+
+/* Title styling */
+.label {
+    -fx-text-fill: #4e342e; /* Dark brown text */
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+    -fx-padding: 10;
+}
+
+/* Button styling */
+.button {
+    -fx-background-color: #6d4c41; /* Medium brown background */
+    -fx-text-fill: #ffffff; /* White text */
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 15;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-min-width: 150px;
+    -fx-min-height: 50px;
+    -fx-max-width: 150px;
+    -fx-max-height: 50px;
+    -fx-alignment: center;
+}
+
+/* Button hover effect */
+.button:hover {
+    -fx-background-color: #5d4037; /* Slightly darker brown for hover */
+    -fx-cursor: hand;
+}
+
+/* Button pressed effect */
+.button:pressed {
+    -fx-background-color: #4e342e; /* Dark brown for pressed state */
+}
+
+/* Logout button specific styling */
+.button:last-child {
+    -fx-background-color: #8e5745; /* Reddish-brown */
+    -fx-border-color: #8e5745;
+    -fx-text-fill: white;
+}
+
+.button:last-child:hover {
+    -fx-background-color: #7b4b3b; /* Darker reddish-brown on hover */
+}
+
+.button:last-child:pressed {
+    -fx-background-color: #5d3229; /* Even darker reddish-brown when pressed */
+}
+
+/* Grid layout styling */
+.grid-pane {
+    -fx-hgap: 20;
+    -fx-vgap: 20;
+    -fx-alignment: center;
+}
+
+/* VBox and HBox padding */
+.vbox {
+    -fx-padding: 20;
+}
+
+.hbox {
+    -fx-spacing: 10;
+    -fx-padding: 20;
+}
+
+/* Card Styling */
+.vbox {
+    -fx-background-color: #d7ccc8; /* Light tan for cards */
+    -fx-background-radius: 15;
+    -fx-padding: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0.5, 0, 5);
+    -fx-alignment: center;
+    -fx-spacing: 10;
+}
+
+/* Card Labels */
+.label {
+    -fx-text-fill: #5d4037; /* Medium brown text */
+    -fx-font-weight: bold;
+    -fx-font-size: 14;
+}
+
+/* Card Buttons */
+.button {
+    -fx-background-color: #8d6e63; /* Light brown background */
+    -fx-text-fill: white;
+    -fx-background-radius: 5;
+}
+
+/* Button hover effect on cards */
+.button:hover {
+    -fx-background-color: #6d4c41; /* Medium brown hover */
+}
+
+/* Button pressed effect on cards */
+.button:pressed {
+    -fx-background-color: #4e342e; /* Dark brown pressed */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .label {
+        -fx-font-size: 20px; /* Adjust title size */
+    }
+
+    .button {
+        -fx-font-size: 14px; /* Adjust button size */
+        -fx-padding: 10; /* Adjust padding */
+    }
+}
+
+/* Add Comment and Review Styling */
+.add-review-section {
+    -fx-background-color: #f5e9e0; /* Soft beige for contrast */
+    -fx-background-radius: 10;
+    -fx-padding: 20;
+    -fx-spacing: 15;
+    -fx-alignment: center;
+}
+
+/* Add Review Labels */
+.add-review-section .label {
+    -fx-text-fill: #4e342e; /* Dark brown text */
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+/* TextArea for comments */
+.text-area {
+    -fx-background-color: #ffffff; /* White background for input */
+    -fx-border-color: #bcaAA8; /* Subtle border */
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-font-size: 14px;
+    -fx-padding: 10;
+    -fx-min-height: 100px;
+    -fx-max-height: 150px;
+    -fx-min-width: 300px;
+}
+
+/* Rating Slider */
+.slider {
+    -fx-border-color: #8d6e63; /* Match button styling */
+    -fx-border-radius: 5;
+    -fx-background-color: #e0d7d3;
+    -fx-padding: 5;
+}
+
+/* Add Review Buttons */
+.add-review-button {
+    -fx-background-color: #8d6e63; /* Light brown background */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-min-width: 120px;
+}
+
+.add-review-button:hover {
+    -fx-background-color: #6d4c41; /* Medium brown hover */
+}
+
+.add-review-button:pressed {
+    -fx-background-color: #4e342e; /* Dark brown pressed */
+}

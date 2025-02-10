@@ -1,0 +1,35 @@
+/* Basic brown aesthetic for the page */
+.root {
+    -fx-background-color: #f5f0e3; /* Light beige background */
+    -fx-font-family: Arial;
+}
+
+.label {
+    -fx-text-fill: #5e4429; /* Deep brown text color */
+    -fx-font-weight: bold;
+}
+
+.button {
+    -fx-background-color: #a1887f;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 10px;
+    -fx-font-size: 14px;
+}
+
+.button:hover {
+    -fx-background-color: #d7c2b6;
+}
+
+.list-view {
+    -fx-background-color: #fff3e0;
+}
+
+.hbox {
+    -fx-alignment: CENTER_LEFT;
+}
+
+.alert {
+    -fx-background-color: #ffeb3d;
+    -fx-text-fill: #5d4037;
+}

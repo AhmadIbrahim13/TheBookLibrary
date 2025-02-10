@@ -1,0 +1,136 @@
+/* General Styles */
+.root {
+    -fx-font-family: "Arial, Helvetica, sans-serif";
+    -fx-background-color: #f3e5dc;
+}
+
+/* VBox and HBox Padding */
+.vbox, .hbox {
+    -fx-padding: 10;
+}
+
+/* Title and Description */
+.label {
+    -fx-font-size: 16px;
+    -fx-text-fill: #3e2c1c;
+}
+
+/* Title Styles */
+.label[style*="font-weight: bold;"] {
+    -fx-text-fill: #5e3d2f;
+}
+
+/* TextFields and PasswordFields */
+.text-field, .password-field {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #b0a085;
+    -fx-border-radius: 5;
+    -fx-padding: 8;
+    -fx-font-size: 14px;
+}
+
+/* Button Styles */
+.button {
+    -fx-background-color: #8d6e4e;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-padding: 15;
+    -fx-background-radius: 8px;
+    -fx-min-width: 150px;
+    -fx-min-height: 50px;
+    -fx-max-width: 150px;
+    -fx-max-height: 50px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0.5, 0, 0);
+    -fx-cursor: hand;
+}
+
+/* Button hover effect */
+.button:hover {
+    -fx-background-color: #795548;
+}
+
+/* Button pressed effect */
+.button:pressed {
+    -fx-background-color: #6d4c41;
+}
+
+/* Button Disabled State */
+.button:disabled {
+    -fx-background-color: #bcaaa0;
+}
+
+/* Message Label (Success and Error) */
+.label[style*="-fx-text-fill: green;"] {
+    -fx-font-weight: bold;
+}
+
+.label[style*="-fx-text-fill: red;"] {
+    -fx-font-weight: bold;
+}
+
+/* Toggle Text Label (Hyperlink Style) */
+.label {
+    -fx-text-fill: #8d6e4e;
+    -fx-underline: true;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.label:hover {
+    -fx-text-fill: #6d4c41;
+}
+
+/* Form Container (VBox) */
+.vbox {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 10;
+    -fx-padding: 20;
+    -fx-spacing: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0.5, 0, 0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .hbox {
+        -fx-spacing: 10;
+        -fx-padding: 10;
+    }
+
+    .button {
+        -fx-font-size: 14px;
+        -fx-padding: 8;
+    }
+
+    .label {
+        -fx-font-size: 14px;
+    }
+
+    .dynamicFormArea {
+        -fx-padding: 10;
+    }
+}
+
+/* Full-screen adjustments */
+.root {
+    -fx-min-width: 100%;
+    -fx-min-height: 100%;
+    -fx-max-width: 100%;
+    -fx-max-height: 100%;
+}
+
+/* Ensure the left pane fully stretches to take up half the window */
+.image-view {
+    -fx-fit-to-width: true;
+    -fx-fit-to-height: true;
+    -fx-preserve-ratio: false;
+}
+
+.dynamicFormArea {
+    -fx-spacing: 20;
+    -fx-alignment: CENTER;
+}
+
+.scroll-bar {
+    -fx-background-color: transparent;
+}
